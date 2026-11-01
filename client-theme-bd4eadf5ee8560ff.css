@@ -1,0 +1,20 @@
+body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:60rem;margin:3rem auto;padding:1rem;background:#f4f2eb;color:#25382f;font-size:16px;line-height:1.75}a{color:inherit}.box{border-top:2px solid;padding-top:1rem}
+
+#dirac-demo-safe-space{display:block;box-sizing:border-box;height:110px;min-height:110px;width:100%;flex:none;pointer-events:none}
+/* Demo navigation is isolated from each site's visual identity. */
+#dirac-demo-tools,#dirac-demo-tools *{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;letter-spacing:normal;text-transform:none;text-shadow:none}
+#dirac-demo-tools{all:initial;display:block;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;position:fixed;z-index:2147483590;left:max(12px,env(safe-area-inset-left));bottom:max(12px,env(safe-area-inset-bottom));width:min(350px,calc(100vw - 24px));color:#20262d;text-align:left;font-size:16px;line-height:1.5}
+#dirac-demo-tools details{display:block;margin:0;border:1px solid #cad0d6;border-radius:8px;background:#fff;box-shadow:0 4px 22px #0002;max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);overflow:auto}
+#dirac-demo-tools summary{display:list-item;cursor:pointer;padding:10px 14px;min-height:44px;font-size:13px;font-weight:700;background:#20262d;color:#fff;list-style-position:inside}
+#dirac-demo-tools summary::marker{color:#b8c1cb}
+#dirac-demo-tools summary span{font-size:12px;font-weight:400;display:block;padding-left:15px;color:#eef1f4;line-height:1.45}
+#dirac-demo-tools .dirac-demo-destinations{padding:12px;display:grid;gap:8px}
+#dirac-demo-tools a{display:block;padding:10px 12px;min-height:44px;border:1px solid #cbd1d8;border-radius:4px;color:#14263b;background:#fff;text-decoration:none;line-height:1.45;font-weight:700;font-size:16px;overflow-wrap:anywhere;transition:background-color .16s ease}
+#dirac-demo-tools a:hover{background:#edf2f6;text-decoration:underline;text-underline-offset:3px}
+#dirac-demo-tools a small{display:block;font-size:13px;font-weight:400;color:#505c69}
+#dirac-demo-tools p{margin:0;padding:0 14px 12px;font-size:13px;color:#505c69;line-height:1.5}
+#dirac-demo-tools :is(a,summary):focus-visible{outline:3px solid #2780c3;outline-offset:-3px}
+@media(prefers-reduced-motion:reduce){#dirac-demo-tools a{transition:none}}
+@media print{#dirac-demo-tools,#dirac-demo-safe-space{display:none}}
+
+body{font-size:16px;line-height:1.7;padding:clamp(20px,5vw,64px);padding-bottom:150px;background:#f5f8f8;color:#1b3039;max-width:74rem;margin:auto}.box{margin-top:42px;padding:36px 0;border-top:1px solid #73888c;max-width:56rem}h1{font-size:clamp(32px,6vw,64px);line-height:1.14;letter-spacing:-.04em;overflow-wrap:anywhere}p{max-width:65ch}a{min-height:44px;display:inline-flex;align-items:center;text-underline-offset:4px}a:focus-visible{outline:3px solid #1475a1;outline-offset:4px}.box a{font-weight:700}small{line-height:1.5}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

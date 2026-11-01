@@ -1,0 +1,7 @@
+KREDIT KOMPONEN KATALOG
+Header, menu, footer, tema, verifikasi sesi, dan kode integrasi berasal dari parfum(3).html yang disediakan pengguna. Tidak dinyatakan sebagai aset berlisensi bebas.
+Grafis fallback Dirac Group: data SVG yang sudah terdapat dalam fungsi dirac-early-image-fallback-js pada referensi. Dipakai tanpa menggambar ulang untuk mengganti rujukan logo yang filenya tidak disertakan dan logo perusahaan di luar dua nama yang diizinkan.
+Logo CV Multi Usaha Mandiri: WebP tertanam dari footer referensi, dipertahankan.
+Dependensi alamat Indonesia: ditanam ke HTML memakai berkas yang hash SHA-512-nya sama persis dengan integrity pada referensi. Lisensi terpisah tidak tercantum pada sumber. Digunakan sebagai bagian integrasi milik pengguna, bukan dinyatakan sebagai pustaka bebas redistribusi.
+Fotografi katalog: salinan aset lokal dari empat website contoh. Kredit dan lisensi foto/font terperinci tetap ada pada masing-masing contoh serta berkas kredit aset katalog sebelumnya.
+Kode layout konten katalog: dibuat untuk paket ini. Tidak ada dependensi framework atau font jaringan yang ditambahkan.

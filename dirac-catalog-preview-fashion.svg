@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid slice" role="img"><title>Ilustrasi pakaian dan komposisi editorial tanpa model</title><defs>
+  <linearGradient id="wall" x2="0.85" y2="1"><stop stop-color="#f2ebdf"/><stop offset="1" stop-color="#c7baa6"/></linearGradient>
+  <linearGradient id="floor" x2=".4" y2="1"><stop stop-color="#c6b395"/><stop offset="1" stop-color="#efe4d2"/></linearGradient>
+  <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#b8d3d0"/><stop offset="1" stop-color="#ecf1e8"/></linearGradient>
+  <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#172b38"/><stop offset=".65" stop-color="#527280"/><stop offset="1" stop-color="#c1bdaa"/></linearGradient>
+  <linearGradient id="sea" x2=".3" y2="1"><stop stop-color="#678b91"/><stop offset="1" stop-color="#213e4a"/></linearGradient>
+  <linearGradient id="metal" x2="0" y2="1"><stop stop-color="#edf1ee"/><stop offset=".25" stop-color="#bcc9cb"/><stop offset=".5" stop-color="#f8faf6"/><stop offset=".8" stop-color="#788b93"/><stop offset="1" stop-color="#354a54"/></linearGradient>
+  <linearGradient id="clay" x2="1" y2=".2"><stop stop-color="#b15137"/><stop offset=".45" stop-color="#e5ae87"/><stop offset="1" stop-color="#963d2d"/></linearGradient>
+  <radialGradient id="light"><stop stop-color="#fff3d7" stop-opacity=".8"/><stop offset="1" stop-color="#fff3d7" stop-opacity="0"/></radialGradient>
+  <radialGradient id="shadow"><stop stop-color="#142321" stop-opacity=".25"/><stop offset="1" stop-color="#142321" stop-opacity="0"/></radialGradient>
+  <pattern id="linen" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 2H7M2 0V7" stroke="#fff" opacity=".13" stroke-width=".5"/></pattern>
+  <pattern id="wood" width="220" height="30" patternUnits="userSpaceOnUse"><path d="M0 8Q50 -1 110 9T220 9M0 22Q65 34 140 22T220 23" stroke="#594935" opacity=".18" fill="none" stroke-width=".8"/></pattern>
+  </defs><rect x="0" y="0" width="1000" height="680" rx="0" fill="#eee9df" /><rect x="0" y="0" width="1000" height="680" rx="0" fill="#dfddd6" /><path d="M236 183l77-40 28 19 31-19 77 40 58 138-74 28-26-52v242H250V297l-26 52-70-28Z" fill="#302d3c" /><path d="M309 148q-1 45 55 1" fill="none" stroke="#dfddd6" stroke-width="3" /><path d="M584 183l77-40 28 19 31-19 77 40 58 138-74 28-26-52v242H598V297l-26 52-70-28Z" fill="#977d9b" /><path d="M657 148q-1 45 55 1" fill="none" stroke="#dfddd6" stroke-width="3" /></svg>

@@ -1,0 +1,12 @@
+CATATAN ASET — 2026.09.25-pt4-dev4-r2-assets
+
+# Ilustrasi editorial lokal
+
+Ilustrasi pada rilis ini disusun dari geometri vektor, warna, pencahayaan ilustratif, dan pola yang dibuat khusus untuk paket website ini. Tidak ada foto orang, potret sintetis, atau foto stok pada aset pengganti.
+
+Gambar utama, ukuran responsif, thumbnail katalog, dan gambar tersemat memakai artwork yang sama sesuai topiknya. Semua aset disimpan lokal. Nama berkas dan rute dipertahankan. Logo perusahaan yang disediakan tetap menggunakan berkas asal.
+
+Visual merupakan ilustrasi, bukan bukti proyek, lokasi, produk komersial tertentu, atau anggota tim yang sebenarnya.
+
+Font dan pemberitahuan lisensi asli tetap dipertahankan. Tidak ada aset visual yang dimuat dari penyedia foto eksternal.
+Atribusi desain website: CV Multi Usaha Mandiri; PT Dirac Inovasi Nusantara.

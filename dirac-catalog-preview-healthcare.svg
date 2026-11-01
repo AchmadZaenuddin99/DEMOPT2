@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="620" viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid slice" role="img"><title>Ilustrasi perlengkapan layanan kesehatan tanpa orang</title><defs>
+  <linearGradient id="wall" x2="0.85" y2="1"><stop stop-color="#f2ebdf"/><stop offset="1" stop-color="#c7baa6"/></linearGradient>
+  <linearGradient id="floor" x2=".4" y2="1"><stop stop-color="#c6b395"/><stop offset="1" stop-color="#efe4d2"/></linearGradient>
+  <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#b8d3d0"/><stop offset="1" stop-color="#ecf1e8"/></linearGradient>
+  <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#172b38"/><stop offset=".65" stop-color="#527280"/><stop offset="1" stop-color="#c1bdaa"/></linearGradient>
+  <linearGradient id="sea" x2=".3" y2="1"><stop stop-color="#678b91"/><stop offset="1" stop-color="#213e4a"/></linearGradient>
+  <linearGradient id="metal" x2="0" y2="1"><stop stop-color="#edf1ee"/><stop offset=".25" stop-color="#bcc9cb"/><stop offset=".5" stop-color="#f8faf6"/><stop offset=".8" stop-color="#788b93"/><stop offset="1" stop-color="#354a54"/></linearGradient>
+  <linearGradient id="clay" x2="1" y2=".2"><stop stop-color="#b15137"/><stop offset=".45" stop-color="#e5ae87"/><stop offset="1" stop-color="#963d2d"/></linearGradient>
+  <radialGradient id="light"><stop stop-color="#fff3d7" stop-opacity=".8"/><stop offset="1" stop-color="#fff3d7" stop-opacity="0"/></radialGradient>
+  <radialGradient id="shadow"><stop stop-color="#142321" stop-opacity=".25"/><stop offset="1" stop-color="#142321" stop-opacity="0"/></radialGradient>
+  <pattern id="linen" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 2H7M2 0V7" stroke="#fff" opacity=".13" stroke-width=".5"/></pattern>
+  <pattern id="wood" width="220" height="30" patternUnits="userSpaceOnUse"><path d="M0 8Q50 -1 110 9T220 9M0 22Q65 34 140 22T220 23" stroke="#594935" opacity=".18" fill="none" stroke-width=".8"/></pattern>
+  </defs><rect x="0" y="0" width="1000" height="680" rx="0" fill="#eee9df" /><rect x="0" y="0" width="1000" height="680" rx="0" fill="#dbe3dd" /><ellipse cx="520" cy="306" rx="213" ry="213" fill="#b6d0c4" opacity=".7"/><ellipse cx="521" cy="584" rx="270" ry="56" fill="url(#shadow)" /><rect x="422" y="187" width="201" height="287" rx="20" fill="#f3f3e7" /><rect x="448" y="169" width="150" height="49" rx="7" fill="#7b9c8d" /><rect x="468" y="272" width="109" height="110" rx="8" fill="#dce9da" /><path d="M511 292h23v25h25v23h-25v25h-23v-25h-25v-23h25z" fill="#497869" /><path d="M642 420q92-66 106 25t-74 93" fill="none" stroke="#517b70" stroke-width="9" /><ellipse cx="645" cy="418" rx="23" ry="23" fill="#d7e6d7" stroke="#517b70" stroke-width="8"/></svg>
