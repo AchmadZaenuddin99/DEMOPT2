@@ -1,0 +1,108 @@
+DIRAC | PEMERIKSAAN DAN PATCH LANJUTAN | 1 NOVEMBER 2026
+
+Sumber kerja adalah ZIP hasil patch terakhir dengan SHA-256 c6d7477ae31ad23602a1550fe8496e50d960309bfbe645f21ca0a8975d60ba51. Perubahan dibatasi pada 12 HTML yang mempunyai temuan terkonfirmasi dan tiga catatan yang sudah ada.
+
+PERBAIKAN YANG DIBUKTIKAN
+1. Lima halaman popup Morrowglass. Batas tinggi sebelumnya memakai selector yang tidak sesuai dengan elemen sebenarnya. Popup dapat terpotong pada 320 × 240, dan header menutupi tombol tutup. Selector batas gulir dibetulkan, lapisan popup disesuaikan, dan tombol tutup diberi ukuran minimal 44 × 44. Penanganan keyboard popup melewatkan Escape dan Tab ketika pencarian native berada di atasnya. Kini Escape pertama menutup pencarian dan mengembalikan fokus ke popup, lalu Escape berikutnya menutup popup.
+
+2. Properti tersimpan Gridora. Thumbnail dapat melebar sekitar 694 piksel di viewport 320 piksel dan menutupi tombol hapus. Ukuran thumbnail kini mengikuti ruang kartu, dengan susunan satu kolom di layar kecil. Setelah penghapusan, fokus menuju kontrol item terdekat atau tautan jelajah ketika daftar kosong. Pada hasil pencarian, kriteria tipe dan kamar yang diwarisi dari halaman awal kini terlihat bersama jalan untuk meresetnya.
+
+3. Pencarian Lumenreel. Halaman sebelumnya belum memuat item film yang akan disaring, dan tombol pencarian serta saran kata kuncinya tidak melakukan pencarian. Enam kartu yang sama dengan katalog contoh kini tersedia langsung dalam HTML. Tombol Cari, Enter, dan tiga saran kata kunci menampilkan hasil yang sesuai beserta jumlahnya. Pencarian yang tidak cocok memberi petunjuk. Saat JavaScript dinonaktifkan, keenam kartu tetap dapat dibaca dengan penjelasan bahwa filter memerlukan JavaScript. Lima pilihan suasana yang sebelumnya tidak bereaksi kini menautkan program atau konteks film yang dijelaskan pada masing-masing tautan.
+
+4. Ketepatan isi dan arah tautan. Total durasi empat film diperbaiki dari 6 jam 12 menit menjadi 5 jam 03 menit, sesuai 112 + 48 + 126 + 17 menit. Dua tautan bacaan pada AXIOM dan SELA menuju bagian penjelasan yang sudah tersedia, sehingga pengguna tidak perlu memuat ulang halaman aktif.
+
+PENGUJIAN PUTARAN INI
+Seluruh 1.424 HTML di luar dua portal dibuka kembali pada area tampilan 320 × 568. Tidak ditemukan kegagalan pada pemeriksaan muatan halaman, judul utama, inisialisasi navigasi demo, dan lebar dokumen. Ini merupakan regresi tampilan; pemeriksaan interaksi terarah dijelaskan berikutnya.
+
+Popup diuji pada lima halaman, masing-masing pada 320 × 240, 320 × 568, dan 1280 × 800. Seluruh 15 kasus lulus pemeriksaan keterjangkauan tombol tutup, batas popup dan pemulihan fokus. Enam kasus tambahan menguji pencarian di atas popup, Tab, dan dua langkah Escape. Semuanya lulus.
+
+Empat halaman interaksi menjalani 49 pemeriksaan yang lulus. Daftar tersimpan diuji pada 320, 390, dan 1280 piksel, termasuk titik sentuh tombol, penghapusan salah satu dan item terakhir, kriteria pencarian, dan reset. Pencarian film diuji untuk enam hasil awal, saran kata kunci, hasil kosong, penghapusan kueri, Enter, klik tombol, serta tampilan tanpa JavaScript. Lima tautan suasana diperiksa ukuran sentuh dan tujuannya. Data properti sintetis yang dipakai untuk pengujian dihapus kembali.
+
+INTEGRITAS DAN KEAMANAN
+Setiap file di luar tiga catatan audit direkonstruksi dari penggantian byte yang diizinkan lalu dibandingkan secara otomatis 1.000 kali. Dua file portal yang memuat Central Guard dibandingkan dengan ZIP terbaru yang dipin. Seluruh 166 token CSP SHA-512 diperiksa terhadap direktif dan blok asli masing-masing. Skrip diperiksa sintaks serta struktur perulangan, timer, dan akses jaringan agar perubahan terisolasi.
+
+Audit skrip publik tidak menemukan kerentanan baru yang terkonfirmasi. Formulir bernama nonpencarian yang diperiksa sudah mempunyai fallback proteksi saat JavaScript tidak tersedia. Semua aset gambar diperiksa formatnya, dan elemen gambar publik mempunyai alt serta dimensi. Aset yang sudah normal dipertahankan. Rute, jumlah file, pemisahan repo, CSS/JS dalam HTML, serta batas unggahan mengikuti paket dasar.
+
+Semua 1.353 demo publik non-404 tetap terjangkau dari index.html dan peta situs. URL internal mengikuti origin tempat repo dipasang. Pemeriksaan nama host deploy lama, respons HTTP pratinjau, hash byte final, dan integritas ZIP diselesaikan sebelum penyerahan. Alur backend produksi serta pengindeksan aktual oleh Google/AI belum diverifikasi.
+
+RIWAYAT PATCH SEBELUM PUTARAN INI
+Bagian berikut merekam validasi dan daftar rujukan pada versi sebelumnya.
+
+DIRAC | PATCH LANJUTAN | 1 NOVEMBER 2026
+
+Versi ini melanjutkan ZIP terakhir dengan SHA-256 c29ba8ec2085f17ba5e322e8348f99e52bc797b3bff92d60df91edd482cf5bbc. Nama file, rute datar, dan pemisahan repo mengikuti paket dasar ini.
+
+TEMUAN DAN PERBAIKAN
+Warna teks pada 151 halaman disesuaikan hanya untuk komponen yang terbukti kurang terbaca. Pengujian warna awal mencakup 42 beranda. Pemeriksaan terarah berikutnya mengunjungi 165 halaman dari lima keluarga demo dan memeriksa 551 kemunculan teks yang sesuai sasaran. Nilai terendah sesudah perbaikan adalah 6,87:1. Pemeriksaan tambahan mencakup 66 teks kecil di 34 halaman, dengan nilai terendah 4,77:1. Pengujian tersebut memakai latar solid dan teks yang benar-benar tampil, termasuk lencana pada daftar favorit setelah produk disimpan. Angka ini menjelaskan cakupan komponen yang diuji.
+
+Tombol Cari serta Enter pada pencarian produk ORVYN kini menjalankan penyaringan lokal dan memindahkan fokus ke status hasil. Pencarian yang tidak cocok menjelaskan cara melanjutkan. Daftar favorit menampilkan pilihan yang tersimpan, memberi jalan ke katalog ketika kosong, dan memulihkan fokus setelah item terakhir dihapus. Produk tetap dapat dibaca tanpa JavaScript dengan penjelasan fitur yang tersedia.
+
+Konfirmasi penambahan produk menampilkan nama, ukuran, dan jumlah sebenarnya. Setelah 99 unit, klik tambahan memberitahukan batas. Uji melalui tombol produk menghasilkan 99 Vector Shell ukuran M dengan subtotal €38.610,00. Jumlah tidak bertambah pada klik berikutnya. Tas dikosongkan kembali setelah pengujian.
+
+Pintasan Ctrl/⌘+K mempertahankan posisi pemanggil pencarian. Escape mengembalikan fokus ke tautan asal. Pemakaian pintasan saat pencarian sudah terbuka mempertahankan kueri. Isian formulir yang sedang digunakan tetap dapat menerima pengetikan.
+
+Enam tombol yang sebelumnya memuat ulang halaman aktif sekarang menuju daftar atau bagian terkait. Katalog film menjelaskan enam film sesuai kartu yang tersedia dan cara penyimpanan daftar tontonan. Dua belas tindakan formulir memperjelas hasil simulasi yang sebenarnya. Nama properti pada kartu tetap tersedia, dan tautan contoh detail menyebut rumah contoh yang akan dibuka. Penanda halaman aktif ditambahkan pada direktori setempat. Dua belas kontrol formulir kini memperoleh nama aksesibel dari label yang terlihat.
+
+PENGUJIAN BROWSER
+Pada salinan sumber yang tetap, seluruh 1.424 halaman di luar portal diperiksa di area tampilan 320 × 568 piksel. Sebanyak 1.385 halaman demo menjalani pengujian menu, pembukaan dan penutupan kategori, pencarian cocok/tidak cocok, penghapusan kueri, dan pemulihan fokus. Hasilnya lulus tanpa kegagalan pada 59.626 pemeriksaan sasaran sentuh dan 5.540 kategori.
+
+Uji tambahan pada 42 beranda mencakup lima ukuran area tampilan, termasuk 320 × 240 dan 568 × 250, serta perubahan dari tata letak ponsel ke desktop. Seluruh 210 tata letak dan 42 perubahan ukuran lulus 5.418 pemeriksaan. Penekanan tombol keyboard Chromium juga memeriksa Tab, Shift+Tab, Escape, dan Ctrl+K. Pada layar pendek, beberapa kontrol perlu digulir agar tampak penuh. Pengujian memakai area tampilan browser pratinjau.
+
+INTEGRITAS DAN BATAS VERIFIKASI
+Perubahan byte diperiksa terhadap rekonstruksi yang memuat hanya penggantian sasaran yang dicatat, sebanyak 1.000 perbandingan otomatis per file di luar tiga catatan audit. Dua file portal yang memuat Central Guard tetap identik dengan ZIP awal maupun paket dasar terbaru. Seluruh 166 token CSP SHA-512 dicocokkan dengan direktif dan blok masing-masing. Pemeriksaan skrip mencakup sintaks dan perbandingan struktur untuk mencegah tambahan loop, timer, atau akses jaringan.
+
+Seluruh 1.353 demo publik tetap terjangkau dari index.html dan peta situs. URL internal dan canonical mengikuti origin tempat repo dipasang. Nama host deploy lama diperiksa di seluruh byte paket. Tautan penerbit rujukan, peta, namespace, lisensi, dan alamat kontak mempertahankan peruntukannya. Pengindeksan aktual Google/AI serta alur akun dengan backend produksi belum diverifikasi. Pengujian HTTP pratinjau dan integritas ZIP diselesaikan sebelum paket diserahkan.
+
+RIWAYAT PATCH DASAR DAN DAFTAR RUJUKAN
+Bagian berikut merekam paket sebelum perubahan di atas.
+
+DIRAC | CATATAN VALIDASI | 1 NOVEMBER 2026
+
+Paket ini melanjutkan dirac.zip dengan SHA-256 f17c081dd53d13011ff200bb158be967618db9dcd12bd9f55ba1d70599ab4e27. Repo pertama berisi 926 file deploy dan repo kedua berisi 861. Kedua catatan di luar repo sudah ada pada paket dasar. Nomor folder hanya untuk pengelompokan unggahan. Tempatkan file di root repo masing-masing sejajar dengan index.html.
+
+MENU PONSEL
+Pada versi dasar ORVYN di 320 × 568, hanya panah selebar 44 piksel yang membuka daftar produk. Mengetuk namanya langsung berpindah halaman. Empat kategori pada masing-masing 1.385 demo menggunakan pola ini. Sekarang nama dan panah membentuk satu tombol kategori. Tautan pertama di dalamnya tetap menuju halaman kategori asli. Di ORVYN, area buka kategori terukur 275 × 52 piksel dan panel menu awal muat tanpa gulir. Area nama merek kini memakai ruang yang tersedia di samping tombol tutup, sehingga nama pendek seperti ORVYN dapat terbaca dalam satu baris. Tautan Beranda mengarah ke merek yang sedang dibuka. Menutup pencarian di dalam kategori mengembalikan fokus ke pemicu dan mempertahankan kategorinya.
+
+Pada ponsel tanpa JavaScript, header terbuka sebelumnya dapat lebih tinggi daripada layar dan tetap menempel di atasnya. Bagian bawah menu tidak dapat dijangkau. Koreksi CSS pada menu cadangan memungkinkan gulir dokumen sampai ke tautan terakhir. Tautan bantuan tersedia, sedangkan kontrol Tas dan Bacaan tersimpan yang memerlukan JavaScript hanya ditampilkan ketika fungsinya tersedia.
+
+KARTU, PRODUK, KERANJANG, DAN KATALOG
+Sebanyak 4.099 kartu dengan satu tujuan mempunyai area ketuk hingga ke tepi kartu pada layar kecil. Teks deskripsi tetap dapat dipilih. Tiga halaman produk ORVYN membedakan gambar siluet dari detail yang diperbesar, menamai palet warna, dan memberi label pada kelompok ukuran. Tautan ke tas tersedia setelah memilih produk. Baris produk di tas kini memperlihatkan gambar, nama, ukuran, harga satuan, jumlah, total, dan tombol hapus tanpa perlu menggeser tabel secara mendatar. Simulasi dengan dua Vector Shell ukuran M menghasilkan subtotal €780,00. Menghapus item terakhir mengembalikan tampilan kosong.
+
+Katalog kini menunjukkan satu pemilih bidang di ponsel dan memperjelas tautan menuju koleksi. Peta situs masing-masing mempunyai pemilih 21 merek yang dapat dipakai tanpa JavaScript. Pada formulir pencarian penerbangan Meridian Air, kolom keberangkatan dan tujuan menggunakan label yang sama di layar dan di pembaca layar.
+
+HASIL UJI
+Pada area tampilan 320 × 568, browser membuka 1.424 HTML di luar dua portal. Seluruh halaman lulus pemeriksaan lebar dan judul utama. Pada 1.385 halaman demo, browser membuka dan menutup 5.540 kategori, menjalankan pencarian dengan hasil dan tanpa hasil, menghapus pencarian, serta memeriksa fokus setelah dialog ditutup. Rangkaian itu mencakup 59.626 pemeriksaan titik sentuh dan 33.983 pemeriksaan tautan di dalam kategori. Tautan yang diulang di beberapa halaman dihitung pada setiap pemakaian.
+
+Di seluruh 42 beranda, pengujian tambahan meliputi 390 × 844, 430 × 932, posisi mendatar 844 × 390, dan desktop 1280 × 800. Pengujian tanpa JavaScript di 320 × 568 memeriksa menu asli dan kemampuan mencapai tautan bawah. Uji navigasi mengunjungi halaman tujuan lalu menggunakan tombol Kembali pada riwayat browser untuk setiap merek. Uji kartu memeriksa 168 area ketuk pada 42 beranda, termasuk pemilihan teks deskripsi. Pemeriksaan isi terpisah meliputi 57 halaman dan membedakan konten yang terpotong dari elemen yang sengaja dapat digeser. Pengujian menggunakan browser pratinjau dengan ukuran area tampilan tersebut.
+
+KEAMANAN DAN PORTABILITAS
+Kedua file portal yang memuat Central Guard cocok byte demi byte dengan ZIP awal maupun patch terakhir. Perubahan JavaScript terbatas pada navigasi antarmuka dan presentasi keranjang. Seluruh hash SHA-512 CSP dicocokkan dengan blok masing-masing. Perubahan ini tidak memerlukan tabel database, ENV, dependensi luar, atau berkas deploy tambahan. CSS dan JavaScript demo tetap menyatu dalam HTML. Preferensi gerak terbatas dan animasi yang sudah ada dipertahankan. Patch tidak menambahkan animasi berulang, polling, atau pengalihan berulang.
+
+Tautan dan canonical internal mengikuti origin tempat setiap repo dipasang. Nama host deploy lama diperiksa pada seluruh file teks. Tautan ke situs sumber, layanan peta, namespace, lisensi, serta alamat kontak yang memang merujuk ke pihak lain memiliki fungsi tersendiri. Pemeriksaan tautan HTML dari index.html mencapai semua 1.353 demo publik non-404. Kedua peta situs juga menautkan seluruh demo publik tersebut. Contoh halaman 404, alias akun, dan batas akses portal mempertahankan perlakuan semula. Hasil indeks Google atau layanan AI serta alur akun dengan backend produksi memerlukan lingkungan produksi.
+
+RUJUKAN NAVIGASI DAN KARTU | 1 NOVEMBER 2026
+Sampel mencakup 100 situs resmi dengan 100 nama dan host berbeda. Yang diperiksa ialah label, tujuan tautan, pengelompokan menu, dan isi kartu yang dapat terbaca pada halaman resmi. Beberapa merek mempunyai induk perusahaan yang sama. Pengujian interaksi ponsel dilakukan pada paket DIRAC.
+
+Temuan yang berkaitan dengan perbaikan:
+1. Nama kategori menyatakan isi atau tugas. IKEA menamai kategori menurut benda, LEGO memberi pilihan berdasarkan usia dan minat, dan USA.gov memakai tindakan seperti memperbarui paspor.
+2. Kategori dan halaman tujuan dapat dibedakan. National Gallery memakai tombol untuk kategori kunjungan, lalu tautan menuju denah dan perencanaan kunjungan. UCL mencantumkan kontrol tutup submenu. Situs pariwisata Jepang menampilkan jalan kembali saat memilih daerah.
+3. Pencarian, akun, dan bantuan mempunyai fungsi yang berbeda dari kategori. Sephora memisahkan pencarian dan layanan toko. Oxford menjelaskan cakupan pencariannya, sedangkan GitLab membedakan tindakan untuk mencoba, meminta demo, dan masuk.
+4. Kartu menyampaikan cukup informasi untuk memilih. IBM menunjukkan jenis materi seperti produk atau webinar. GitHub memakai ringkasan fungsi alat. UNICEF menyebut layanan tujuan, dan Bose menyediakan tindakan untuk memasukkan barang ke keranjang pada kartu produk.
+
+Perdagangan dan merek konsumen (35 situs)
+IKEA, LEGO, adidas, PUMA, Patagonia, The North Face, Columbia, ASICS, New Balance, Sony, Samsung, LG,
+Canon, Nikon, Bose, Dyson, Philips, Logitech, Sephora, Lush, L’Occitane, Clinique, Estée Lauder, MAC
+Cosmetics, Kiehl’s, Dior, Chanel, Levi’s, Vans, Reebok, Converse, Skechers, Gibson, Fender, Specialized.
+
+Teknologi dan layanan bisnis (35 situs)
+IBM, Oracle, SAP, Salesforce, Adobe, Autodesk, Atlassian, Cloudflare, DigitalOcean, Grafana Labs, Red
+Hat, Docker, GitHub, GitLab, Stripe, Twilio, Slack, Dropbox, Notion, Figma, Miro, Datadog, Elastic,
+MongoDB, Snowflake, Databricks, ServiceNow, Workday, Zoom, Cisco, HubSpot, Asana, Zendesk, NVIDIA, Intel.
+
+Lembaga publik, universitas, museum, dan pariwisata (30 situs)
+GOV.UK, USA.gov, Government of Canada, Service Public Prancis, myGov Australia, Pemerintah Singapura,
+University of Oxford, Stanford University, Harvard University, MIT, Princeton University, Yale
+University, University College London, University of California Berkeley, Metropolitan Museum of Art,
+Musée du Louvre, Museum of Modern Art, Rijksmuseum, National Gallery London, Victoria and Albert Museum,
+VisitBritain, Japan National Tourism Organization, Switzerland Tourism, Tourism New Zealand, Tourism
+Australia, Visit Norway, NASA, World Health Organization, European Space Agency, UNICEF.

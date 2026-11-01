@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="280" viewBox="0 0 1000 680" preserveAspectRatio="xMidYMid slice" role="img"><title>Ilustrasi stadion dan lapangan tanpa orang</title><defs>
+  <linearGradient id="wall" x2="0.85" y2="1"><stop stop-color="#f2ebdf"/><stop offset="1" stop-color="#c7baa6"/></linearGradient>
+  <linearGradient id="floor" x2=".4" y2="1"><stop stop-color="#c6b395"/><stop offset="1" stop-color="#efe4d2"/></linearGradient>
+  <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#b8d3d0"/><stop offset="1" stop-color="#ecf1e8"/></linearGradient>
+  <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#172b38"/><stop offset=".65" stop-color="#527280"/><stop offset="1" stop-color="#c1bdaa"/></linearGradient>
+  <linearGradient id="sea" x2=".3" y2="1"><stop stop-color="#678b91"/><stop offset="1" stop-color="#213e4a"/></linearGradient>
+  <linearGradient id="metal" x2="0" y2="1"><stop stop-color="#edf1ee"/><stop offset=".25" stop-color="#bcc9cb"/><stop offset=".5" stop-color="#f8faf6"/><stop offset=".8" stop-color="#788b93"/><stop offset="1" stop-color="#354a54"/></linearGradient>
+  <linearGradient id="clay" x2="1" y2=".2"><stop stop-color="#b15137"/><stop offset=".45" stop-color="#e5ae87"/><stop offset="1" stop-color="#963d2d"/></linearGradient>
+  <radialGradient id="light"><stop stop-color="#fff3d7" stop-opacity=".8"/><stop offset="1" stop-color="#fff3d7" stop-opacity="0"/></radialGradient>
+  <radialGradient id="shadow"><stop stop-color="#142321" stop-opacity=".25"/><stop offset="1" stop-color="#142321" stop-opacity="0"/></radialGradient>
+  <pattern id="linen" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 2H7M2 0V7" stroke="#fff" opacity=".13" stroke-width=".5"/></pattern>
+  <pattern id="wood" width="220" height="30" patternUnits="userSpaceOnUse"><path d="M0 8Q50 -1 110 9T220 9M0 22Q65 34 140 22T220 23" stroke="#594935" opacity=".18" fill="none" stroke-width=".8"/></pattern>
+  </defs><rect x="0" y="0" width="1000" height="680" rx="0" fill="#eee9df" /><rect x="0" y="0" width="1000" height="680" rx="0" fill="#d5ded2" /><ellipse cx="500" cy="397" rx="330" ry="170" fill="#2f5847" /><ellipse cx="500" cy="367" rx="322" ry="167" fill="#c5ad73" /><ellipse cx="500" cy="350" rx="279" ry="139" fill="#2f5847" /><ellipse cx="500" cy="342" rx="225" ry="102" fill="#668c70" /><rect x="349" y="282" width="300" height="120" rx="0" fill="none" stroke="#c6d3b3" stroke-width="3"/><ellipse cx="500" cy="342" rx="44" ry="44" fill="none" stroke="#c6d3b3" stroke-width="3"/><line x1="500" y1="282" x2="500" y2="402" stroke="#c6d3b3" stroke-width="3" /></svg>
